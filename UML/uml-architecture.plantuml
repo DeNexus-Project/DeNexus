@@ -1,0 +1,30 @@
+@startuml
+
+package "Web Scraping" {
+  [Web Source 1] --> [Azure Databricks]
+  [Web Source 2] --> [Azure Databricks]
+  [Web Source 3] --> [Azure Databricks]
+}
+
+package "CSV Files" {
+  [CSV] --> [Blob Storage]
+  [CSV] --> [Data Lake (ADLS Gen2)]
+}
+
+[Azure Databricks] --> [Data Lake (ADLS Gen2)] : "Scraped Data"
+[Azure Databricks] --> [Blob Storage] : "Scraped Data"
+
+package "ETL Process" {
+  [Data Lake (ADLS Gen2)] --> [Azure Data Factory]
+  [Blob Storage] --> [Azure Data Factory]
+}
+
+[Azure Data Factory] --> [Azure Databricks] : "Data Transformations"
+[Azure Databricks] --> [Data Lake (ADLS Gen2)] : "Transformed Data"
+[Azure Databricks] --> [Blob Storage] : "Transformed Data"
+
+[Azure Data Factory] --> [Data Warehouse (Azure SQL Database)] : "Loaded Data"
+[Data Warehouse (Azure SQL Database)] --> [Power BI] : "Visualization"
+[Data Warehouse (Azure SQL Database)] --> [Azure Machine Learning] : "Advanced Analytics (Optional)"
+
+@enduml

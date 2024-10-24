@@ -34,7 +34,7 @@ For strategic decision-making, the architecture includes visualisation tools tha
 
 ## Conceptual diagram.
 The conceptual diagram, developed with PlantUML, presents a clear view of the data flow from ingestion to visualisation.
-
+![UML Architecture](UML\uml-architecture.png)
 
 ## Cloud Features.
 The proposed architecture for DeNexus leverages several Microsoft Azure services to ensure a scalable, secure and efficient environment. The main features of the cloud services used are described below:
