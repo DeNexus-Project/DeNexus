@@ -1,0 +1,6 @@
+Enlace al diseño de Figma: [Enlace a Figma](https://www.figma.com/board/nCpHmomqhB13ia5XLhXsD1/DENEXUS-PROJECT?node-id=64-152&t=OD07PxFRfpsJwg6S-1)
+
+Descripción:
+El diseño de la arquitectura de la interfaz y experiencia del usuario está alojado en Figma. Por favor, acceda a través del enlace proporcionado. 
+
+Este diseño cubre la estructura de navegación, pantallas clave, y componentes de UI usados en el proyecto.
